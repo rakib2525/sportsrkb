@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { getGuideHubForGuideSlug } from "@/data/guideHubs";
 import { getGuideBySlug, guides } from "@/data/guides";
 import { getToolBySlug } from "@/data/tools";
 import { createSeoMetadata } from "@/lib/seo/metadata";
@@ -53,6 +54,7 @@ export default function GuidePage({ params }: GuidePageProps) {
   const relatedGuides = guide.relatedGuides
     .map((slug) => getGuideBySlug(slug))
     .filter(Boolean);
+  const relatedHub = getGuideHubForGuideSlug(guide.slug);
 
   return (
     <article>
@@ -182,6 +184,26 @@ export default function GuidePage({ params }: GuidePageProps) {
                   ) : null,
                 )}
               </div>
+            </section>
+          ) : null}
+
+          {relatedHub ? (
+            <section className="rounded-lg border border-emerald-200 bg-emerald-50 p-6 dark:border-emerald-900 dark:bg-emerald-950/40">
+              <p className="text-sm font-bold uppercase tracking-wide text-emerald-700 dark:text-emerald-300">
+                Topic hub
+              </p>
+              <h2 className="mt-2 text-2xl font-black tracking-tight text-slate-950 dark:text-white">
+                More in {relatedHub.title}
+              </h2>
+              <p className="mt-3 max-w-2xl leading-7 text-slate-700 dark:text-slate-300">
+                {relatedHub.excerpt}
+              </p>
+              <Link
+                href={relatedHub.href}
+                className="btn-glow mt-5 inline-flex rounded bg-sport-primary px-4 py-2 text-sm font-black text-sport-dark transition hover:bg-emerald-300"
+              >
+                Explore this topic
+              </Link>
             </section>
           ) : null}
         </div>

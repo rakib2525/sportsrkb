@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { calculatorPages } from "@/data/calculators";
+import { guideHubs } from "@/data/guideHubs";
 import { guides } from "@/data/guides";
 import { siteUrl } from "@/lib/site";
 
@@ -36,6 +37,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  const guideHubRoutes = guideHubs.map((hub) => ({
+    url: `${siteUrl}${hub.href}`,
+    lastModified,
+    changeFrequency: "weekly" as const,
+    priority: 0.82,
+  }));
+
   const calculatorRoutes = calculatorPages.map((calculator) => ({
     url: `${siteUrl}/tools/${calculator.slug}`,
     lastModified,
@@ -43,5 +51,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  return [...staticRoutes, ...guideRoutes, ...calculatorRoutes];
+  return [...staticRoutes, ...guideHubRoutes, ...guideRoutes, ...calculatorRoutes];
 }
