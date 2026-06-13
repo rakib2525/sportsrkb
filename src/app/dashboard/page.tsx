@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PopularGuides } from "@/components/discovery/PopularGuides";
 import { PageHero } from "@/components/PageHero";
 import { QuickCalculatorLinks } from "@/components/dashboard/QuickCalculatorLinks";
 import { RecentCalculationsHub } from "@/components/dashboard/RecentCalculationsHub";
@@ -27,6 +28,7 @@ export default function DashboardPage() {
           to a server, database, or API.
         </div>
         <QuickCalculatorLinks />
+        <PopularGuides />
         <SavedTeams />
         <RecentCalculationsHub />
         <TournamentDrafts />

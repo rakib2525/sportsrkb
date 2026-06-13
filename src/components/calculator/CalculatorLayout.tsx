@@ -6,6 +6,8 @@ import {
   StickyAnchorAdPlaceholder,
   TopCalculatorAd,
 } from "@/components/ads/AdPlaceholders";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { PopularGuides } from "@/components/discovery/PopularGuides";
 import { GlossaryTooltip } from "@/components/glossary/GlossaryTooltip";
 import { JsonLd } from "@/components/seo/JsonLd";
 import type { CalculatorPageData } from "@/data/calculators";
@@ -47,12 +49,13 @@ export function CalculatorLayout({
         <JsonLd data={faqSchema(calculator.faqs)} />
         <header className="bg-sport-dark text-white">
           <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-            <Link
-              href="/tools"
-              className="btn-glow inline-flex rounded text-sm font-bold text-sport-primary hover:text-emerald-200"
-            >
-              Tools
-            </Link>
+            <Breadcrumbs
+              items={[
+                { label: "Home", href: "/" },
+                { label: "Tools", href: "/tools" },
+                { label: calculator.name },
+              ]}
+            />
             <h1 className="mt-4 max-w-3xl text-3xl font-black tracking-tight text-balance sm:text-5xl">
               {calculator.name}
             </h1>
@@ -188,6 +191,10 @@ export function CalculatorLayout({
                 )}
               </div>
             </section>
+          </div>
+
+          <div className="mt-8">
+            <PopularGuides />
           </div>
         </div>
       </article>

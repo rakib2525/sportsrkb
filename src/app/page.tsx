@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PopularCalculators } from "@/components/discovery/PopularCalculators";
+import { PopularGuides } from "@/components/discovery/PopularGuides";
 import { GuideCard } from "@/components/GuideCard";
 import { ToolCard } from "@/components/ToolCard";
 import { guideHubs } from "@/data/guideHubs";
@@ -101,6 +103,9 @@ export default function Home() {
             {featuredTools.map((tool) => (
               <ToolCard key={tool.name} tool={tool} />
             ))}
+          </div>
+          <div className="mt-8">
+            <PopularCalculators />
           </div>
         </div>
       </section>
@@ -209,6 +214,9 @@ export default function Home() {
             {featuredGuides.map((guide) => (
               <GuideCard key={guide.slug} guide={guide} />
             ))}
+          </div>
+          <div className="mt-8">
+            <PopularGuides />
           </div>
         </div>
       </section>

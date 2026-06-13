@@ -84,6 +84,8 @@ export const guideHubs: GuideHub[] = [
       "target-score-vs-required-run-rate-explained",
       "how-to-plan-a-run-chase-in-cricket",
       "how-to-calculate-team-run-rate-after-every-over",
+      "t20-run-rate-strategy-guide",
+      "odi-run-rate-strategy-guide",
       "balls-to-overs-conversion-examples",
     ],
     toolSlugs: [
@@ -178,6 +180,8 @@ export const guideHubs: GuideHub[] = [
       "how-to-calculate-bowling-average-with-examples",
       "bowling-strike-rate-explained-with-examples",
       "dot-ball-percentage-in-cricket-explained",
+      "how-dot-balls-impact-a-match",
+      "death-over-bowling-strategies",
       "how-to-analyze-a-bowlers-spell",
       "cricket-maiden-over-meaning-and-importance",
     ],

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { GuideCard } from "@/components/GuideCard";
 import { JsonLd } from "@/components/seo/JsonLd";
 import type { GuideHub } from "@/data/guideHubs";
@@ -37,12 +38,13 @@ export function GuideHubPage({ hub }: { hub: GuideHub }) {
 
       <header className="bg-sport-dark text-white">
         <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-          <Link
-            href="/guides"
-            className="text-sm font-bold text-emerald-300 hover:text-emerald-200"
-          >
-            Guides
-          </Link>
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Guides", href: "/guides" },
+              { label: hub.title },
+            ]}
+          />
           <h1 className="mt-4 text-3xl font-black tracking-tight text-balance sm:text-5xl">
             {hub.title}
           </h1>

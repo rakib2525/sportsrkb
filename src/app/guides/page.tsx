@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PopularGuides } from "@/components/discovery/PopularGuides";
 import { GuideCard } from "@/components/GuideCard";
 import { PageHero } from "@/components/PageHero";
 import { guideHubs } from "@/data/guideHubs";
@@ -52,6 +53,10 @@ export default function GuidesPage() {
               </Link>
             ))}
           </div>
+        </div>
+
+        <div className="mb-12">
+          <PopularGuides />
         </div>
 
         <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">

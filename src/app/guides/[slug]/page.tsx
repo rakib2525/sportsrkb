@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { PopularCalculators } from "@/components/discovery/PopularCalculators";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getGuideHubForGuideSlug } from "@/data/guideHubs";
 import { getGuideBySlug, guides } from "@/data/guides";
@@ -69,12 +71,13 @@ export default function GuidePage({ params }: GuidePageProps) {
       <JsonLd data={faqSchema(guide.faqs)} />
       <header className="bg-slate-950 text-white">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-          <Link
-            href="/guides"
-            className="text-sm font-bold text-emerald-300 hover:text-emerald-200"
-          >
-            Guides
-          </Link>
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Guides", href: "/guides" },
+              { label: guide.title },
+            ]}
+          />
           <h1 className="mt-4 text-3xl font-black tracking-tight text-balance sm:text-5xl">
             {guide.title}
           </h1>
@@ -206,6 +209,8 @@ export default function GuidePage({ params }: GuidePageProps) {
               </Link>
             </section>
           ) : null}
+
+          <PopularCalculators />
         </div>
       </div>
     </article>
