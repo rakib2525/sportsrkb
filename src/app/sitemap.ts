@@ -15,6 +15,8 @@ const routes = [
   "/privacy-policy",
   "/terms-and-conditions",
   "/disclaimer",
+  "/adsense",
+  "/google-search-console",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -15,6 +15,8 @@ const policyLinks = [
   { href: "/privacy-policy", label: "Privacy Policy" },
   { href: "/terms-and-conditions", label: "Terms and Conditions" },
   { href: "/disclaimer", label: "Disclaimer" },
+  { href: "/adsense", label: "Advertising Policy" },
+  { href: "/google-search-console", label: "Search Console" },
 ];
 
 export function Footer() {
