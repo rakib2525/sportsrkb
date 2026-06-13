@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Offline | RKBSports.app</title>
+    <meta
+      name="description"
+      content="RKBSports.app offline fallback for saved cricket calculator pages."
+    />
+    <meta name="theme-color" content="#0B0F19" />
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at top left, rgba(0, 255, 102, 0.16), transparent 34rem),
+          #0b0f19;
+        color: #f8fafc;
+      }
+
+      main {
+        width: min(90vw, 38rem);
+        border: 1px solid rgba(148, 163, 184, 0.28);
+        border-radius: 18px;
+        padding: 2rem;
+        background: rgba(17, 24, 39, 0.86);
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+      }
+
+      a {
+        color: #00ff66;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p>RKBSports.app</p>
+      <h1>You are offline</h1>
+      <p>
+        Saved calculator pages may still open if they were cached on this device.
+        Reconnect to load pages that have not been saved yet.
+      </p>
+      <p><a href="/">Try the home page</a></p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,3 @@
+# RKBSports.app ads.txt placeholder.
+# Add the real Google AdSense publisher line here only after AdSense approval.
+# Do not add a fake publisher ID.

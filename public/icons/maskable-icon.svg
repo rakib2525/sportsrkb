@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">RKBSports maskable app icon</title>
+  <rect width="512" height="512" fill="#0B0F19"/>
+  <circle cx="386" cy="126" r="58" fill="#00FF66"/>
+  <path d="M92 354c84-92 178-148 326-187" fill="none" stroke="#F97316" stroke-width="34" stroke-linecap="round"/>
+  <path d="M96 386h320" fill="none" stroke="#00FF66" stroke-width="40" stroke-linecap="round"/>
+  <text x="256" y="294" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="104" font-weight="800" text-anchor="middle">RKB</text>
+</svg>
